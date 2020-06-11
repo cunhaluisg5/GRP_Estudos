@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
-import Scan from '../Components/Scan'
+import Scan from '../components/Scan';
 
-class TestQRCode extends Component {
+class TestScan extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={{flex: 1}}>
                 <Scan />
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#131313'
-    }
-})
-
-export default TestQRCode
+export default TestScan

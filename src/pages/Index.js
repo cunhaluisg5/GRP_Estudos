@@ -1,46 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+
+import { Container, Text, Button } from '../styles/Style';
 
 class Index extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.text}>
-                    Olá, esta é uma tela de teste!!!
-                </Text>
+            <Container>
+                <Text color={'black'}> Olá, esta é uma tela de teste!!! </Text>
 
                 <TouchableOpacity
                     onPress={() => { this.props.navigation.navigate("TestScan") }}>
-                    <View style={styles.button}>
-                        <Text style={styles.buttonText}>
-                            Testar Leitor
-                        </Text>
-                    </View>
+                    <Button>
+                        <Text color={'white'}> Testar Leitor </Text>
+                    </Button>
                 </TouchableOpacity>
-            </View>
+            </Container>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    text: {
-        fontSize: 20
-    },
-    button: {
-        backgroundColor: '#053480',
-        marginTop: 10,
-        padding: 10,
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: '#FFF',
-        fontSize: 20
-    }
-})
 
 export default Index;
