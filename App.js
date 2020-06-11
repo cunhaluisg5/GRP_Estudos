@@ -4,6 +4,6 @@ import React from 'react'
 import Router from './src/Router'
 
 const App = prop => (
-  <Router/>
+  <Router />
 )
 export default App

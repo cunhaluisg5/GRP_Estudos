@@ -1,28 +1,35 @@
 import Index from './pages/Index';
+import TestScan from './pages/TestScan'
 
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator} from 'react-navigation-stack';
+import { createStackNavigator } from 'react-navigation-stack';
 
 const AppNavigator = createStackNavigator(
   {
-    'Index' : {
+    'Index': {
       screen: Index,
       navigationOptions: {
         title: "Tela de Teste"
       }
-    }
-  }, {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor:"#06f"
-      },
-      headerTitleStyle: {
-        color: 'white',
-        fontSize: 30,
+    },
+    'TestScan': {
+      screen: TestScan,
+      navigationOptions: {
+        title: "Tela do Leitor"
       }
     }
+  }, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: "#06f"
+    },
+    headerTitleStyle: {
+      color: 'white',
+      fontSize: 30,
+    }
   }
+}
 );
 
-const Router = createAppContainer(AppNavigator); 
+const Router = createAppContainer(AppNavigator);
 export default Router;
